@@ -6,8 +6,12 @@ import Avatar from "react-avatar";
 function Header() {
   return (
     <header>
-      <div className="flex flex-col md:flex-row items-center p-5 bg-gray-500/10 rounded-b-2xl">
-        <h1 className="text-xl md:text-3xl pb-2 md:pb-0 md:px-5 font-semibold cursor-default">
+        {/* Gradient */}
+        <div
+          className="absolute top-0 left-0 w-full h-[60vh] 
+        bg-gradient-to-br from-pink-400 to-three-blue
+        rounded-md filter blur-3xl opacity-40 -z-50"
+        />
           [LXIX]
         </h1>
 
