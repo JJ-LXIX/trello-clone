@@ -33,6 +33,12 @@ function Header() {
           <Avatar githubHandle="JJ-LXIX" round size="50" />
         </div>
       </div>
+      <div className="flex items-center justify-center px-5 md:py-5">
+        <p className="flex items-center p-5 text-sm font-light pr-5 shadow-2xl rounded-xl w-fit italic max-w-3xl bg-four-gray/20 text-two-white-text">
+          <UserCircleIcon className="inline-block h-10 w-10 text-two-white-text mr-1" />
+          GPT is summarizing your tasks for the day...
+        </p>
+      </div>
     </header>
   );
 }
