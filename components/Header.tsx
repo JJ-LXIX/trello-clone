@@ -4,14 +4,9 @@ import { MagnifyingGlassIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 function Header() {
   return (
     <header>
-      <Image
-        src="https://links.papareact.com/c2cdd5"
-        alt="Logo"
-        width={300}
-        height={100}
-        className="w-44 md:w-56 pb-10 md:pb-0 object-contain"
-      />
-      <div>
+        <h1 className="text-xl md:text-3xl pb-2 md:pb-0 md:px-5 font-semibold cursor-default">
+          [LXIX]
+        </h1>
         {/* Search Box */}
         <form>
           <input type="text" />
