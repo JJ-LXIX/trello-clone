@@ -19,6 +19,8 @@ function Header() {
         </form>
 
         {/* User Avatar */}
+          <Avatar githubHandle="JJ-LXIX" round size="50" />
+        </div>
       </div>
     </header>
   );
