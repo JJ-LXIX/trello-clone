@@ -1,12 +1,12 @@
+import Board from "@/components/Board";
 import Header from "@/components/Header";
 
 export default function Home() {
   return (
-    <main>
+    <main className="text-two-white-text">
       <Header />
 
-      {/* TODO BOARD */}
-      <h1>Hello World!</h1>
+      <Board />
     </main>
   );
 }
