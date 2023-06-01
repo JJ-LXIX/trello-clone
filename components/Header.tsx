@@ -28,7 +28,7 @@ function Header() {
   // }, [board]);
 
   return (
-    <header>
+    <header className="pb-10 md:pb-5">
       <div className="flex flex-col md:flex-row items-center p-5  rounded-b-2xl">
         {/* Gradient */}
         <div
