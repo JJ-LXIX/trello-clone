@@ -8,16 +8,22 @@ interface BoardState {
   setBoardState: (board: Board) => void;
   updateTodoInDB: (todo: Todo, columnId: TypedColumn) => void;
 
+  newTaskInput: string;
+  setNewTaskInput: (input: string) => void;
+
   searchString: string;
   setSearchString: (searchString: string) => void;
 
   deleteTask: (taskIndex: number, todoId: Todo, id: TypedColumn) => void;
 }
 
-export const userBoardStore = create<BoardState>((set, get) => ({
+export const useBoardStore = create<BoardState>((set, get) => ({
   board: {
     columns: new Map<TypedColumn, Column>(),
   },
+
+  newTaskInput: "",
+  setNewTaskInput: (input: string) => set({ newTaskInput: input }),
 
   searchString: "",
 
