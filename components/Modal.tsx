@@ -3,11 +3,16 @@
 import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { useModalStore } from "@/store/ModalStore";
+import { useBoardStore } from "@/store/BoardStore";
 
 function Modal() {
   const [isOpen, closeModal] = useModalStore((state) => [
     state.isOpen,
     state.closeModal,
+  ]);
+  const [newTaskInput, setNewTaskInput] = useBoardStore((state) => [
+    state.newTaskInput,
+    state.setNewTaskInput,
   ]);
   return (
     // Use the `Transition` component at the root level

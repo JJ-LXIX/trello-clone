@@ -1,5 +1,5 @@
 "use client";
-import { userBoardStore } from "@/store/BoardStore";
+import { useBoardStore } from "@/store/BoardStore";
 import { XCircleIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import {
@@ -24,7 +24,7 @@ function TodoCard({
   draggableProps,
   dragHandleProps,
 }: Props) {
-  const deleteTask = userBoardStore((state) => state.deleteTask);
+  const deleteTask = useBoardStore((state) => state.deleteTask);
 
   return (
     <div

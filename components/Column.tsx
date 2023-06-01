@@ -1,7 +1,7 @@
 import { PlusCircleIcon } from "@heroicons/react/24/solid";
 import { Draggable, Droppable } from "react-beautiful-dnd";
 import TodoCard from "./TodoCard";
-import { userBoardStore } from "@/store/BoardStore";
+import { useBoardStore } from "@/store/BoardStore";
 import { useModalStore } from "@/store/ModalStore";
 
 type Props = {
@@ -19,7 +19,7 @@ const idToColumnText: {
 };
 
 function Columns({ id, todos, index }: Props) {
-  const [searchString] = userBoardStore((state) => [state.searchString]);
+  const [searchString] = useBoardStore((state) => [state.searchString]);
   const openModal = useModalStore((state) => state.openModal);
 
   return (
