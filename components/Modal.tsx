@@ -55,7 +55,7 @@ function Modal() {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-black bg-opacity-25" />
+          <div className="fixed inset-0 bg-zinc-900/50" />
         </Transition.Child>
 
         {/*
@@ -73,13 +73,16 @@ function Modal() {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="bg-white w-full max-w-md transform overflow-hidden rounded-2xl  p-6 text-left align-middle shadow-xl transition-all ">
-                <Dialog.Title
+              <Dialog.Panel
+                className="bg-one-black w-full max-w-md transform overflow-hidden rounded-2xl 
+              p-6 text-left align-middle shadow-lg transition-all "
+              >
+                {/* <Dialog.Title
                   as="h3"
-                  className="text-lg font-medium leading-6 text-gray-900 pb-2"
+                  className="text-lg font-medium leading-6 text-gray-200 pb-2"
                 >
                   Add a Task
-                </Dialog.Title>
+                </Dialog.Title> */}
 
                 <div className="mt-2">
                   <input
@@ -89,7 +92,7 @@ function Modal() {
                       setNewTaskInput(e.target.value);
                     }}
                     placeholder="Enter a task here..."
-                    className="w-full border border-gray-300 rounded-md outline-none p-5"
+                    className="w-full border border-zinc-300/50 bg-zinc-800 text-two-white-text rounded-md outline-none p-5"
                   />
                 </div>
 
@@ -103,7 +106,7 @@ function Modal() {
                     onClick={() => {
                       imagePickerRef.current?.click();
                     }}
-                    className="w-full border border-gray-300 rounded-md outline-none p-5 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    className="w-full border text-two-white-text border-zinc-300/50 bg-zinc-800 rounded-md outline-none p-5 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                   >
                     <PhotoIcon className="h-6 w-6 mr-2 inline-block" />
                     Upload Image
@@ -113,7 +116,7 @@ function Modal() {
                       alt="Uploaded Image"
                       width={200}
                       height={200}
-                      className="w-full h-44 object-cover mt-2 filter hover:grayscale transition-all duration-150 cursor-not-allowed"
+                      className="w-full rounded-md h-44 object-cover mt-2 filter hover:grayscale transition-all duration-150 cursor-not-allowed"
                       src={URL.createObjectURL(image)}
                       onClick={() => setImage(null)}
                     />
@@ -133,9 +136,9 @@ function Modal() {
                   <button
                     type="submit"
                     disabled={!newTaskInput}
-                    className="bg-blue-100 text-blue-900 hover:bg-blue-200 focus-visible:ring-blue-500 focus:outline-none 
+                    className="bg-gray-700 text-blue-100 hover:bg-blue-200 focus-visible:ring-blue-500 focus:outline-none 
                   focus:visible:ring-2 px-4 py-2 text-sm font-medium inline-flex justify-center rounded-md border border-transparent 
-                  focus-visible-ring-offset-2 disabled:bg-gray-100 disabled:text-gray-300 disabled:cursor-not-allowed transition-all duration-300"
+                  focus-visible-ring-offset-2 disabled:bg-gray-500 disabled:text-gray-800 disabled:cursor-not-allowed transition-all duration-300"
                   >
                     Add Task
                   </button>
