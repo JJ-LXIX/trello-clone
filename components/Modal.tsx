@@ -72,6 +72,50 @@ function Modal() {
 
                 {/* Task Type Radio Group */}
                 <TaskTypeRadioGroup />
+                {/* Image Upload */}
+                <div className="mt-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      imagePickerRef.current?.click();
+                    }}
+                    className="w-full border border-gray-300 rounded-md outline-none p-5 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                  >
+                    <PhotoIcon className="h-6 w-6 mr-2 inline-block" />
+                    Upload Image
+                  </button>
+                  {image && (
+                    <Image
+                      alt="Uploaded Image"
+                      width={200}
+                      height={200}
+                      className="w-full h-44 object-cover mt-2 filter hover:grayscale transition-all duration-150 cursor-not-allowed"
+                      src={URL.createObjectURL(image)}
+                      onClick={() => setImage(null)}
+                    />
+                  )}
+                  <input
+                    type="file"
+                    ref={imagePickerRef}
+                    hidden
+                    onChange={(e) => {
+                      if (!e.target.files![0].type.startsWith("image/")) return;
+                      setImage(e.target.files![0]);
+                    }}
+                  />
+                </div>
+
+                <div className="mt-4">
+                  <button
+                    type="submit"
+                    disabled={!newTaskInput}
+                    className="bg-blue-100 text-blue-900 hover:bg-blue-200 focus-visible:ring-blue-500 focus:outline-none 
+                  focus:visible:ring-2 px-4 py-2 text-sm font-medium inline-flex justify-center rounded-md border border-transparent 
+                  focus-visible-ring-offset-2 disabled:bg-gray-100 disabled:text-gray-300 disabled:cursor-not-allowed transition-all duration-300"
+                  >
+                    Add Task
+                  </button>
+                </div>
               </Dialog.Panel>
             </Transition.Child>
           </div>
