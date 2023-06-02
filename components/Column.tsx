@@ -89,11 +89,7 @@ function Columns({ id, todos, index }: Props) {
                   })}
                   {provided.placeholder}
                   <div className="flex items-end justify-end p-2 ">
-                    <button>
-                      <PlusCircleIcon
-                        onClick={openModal}
-                        className="h-10 w-10 text-green-600"
-                      />
+                      <PlusCircleIcon className="h-10 w-10 text-green-600" />
                     </button>
                   </div>
                 </div>
