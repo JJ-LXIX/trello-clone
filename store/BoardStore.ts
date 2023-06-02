@@ -40,6 +40,9 @@ export const useBoardStore = create<BoardState>((set, get) => ({
 
   setSearchString: (searchString) => set({ searchString }),
 
+  image: null,
+
+  setImage: (image: File | null) => set({ image }),
   getBoard: async () => {
     const board = await getTodosGroupedByColumn();
     set({ board });
