@@ -32,7 +32,7 @@ function Header() {
       <div className="flex flex-col md:flex-row items-center p-5  rounded-b-2xl">
         {/* Gradient */}
         <div
-          className="absolute top-0 left-0 w-full h-[60vh] 
+          className="absolute top-0 left-0 w-full h-[45vh] 
         bg-gradient-to-br from-pink-400 to-three-blue
         rounded-md filter blur-3xl opacity-40 -z-50"
         />
