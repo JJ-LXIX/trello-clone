@@ -19,7 +19,10 @@ const idToColumnText: {
 };
 
 function Columns({ id, todos, index }: Props) {
-  const [searchString] = useBoardStore((state) => [state.searchString]);
+  const [searchString, setNewTaskType] = useBoardStore((state) => [
+    state.searchString,
+    state.setNewTaskType,
+  ]);
   const openModal = useModalStore((state) => state.openModal);
 
   return (
