@@ -136,7 +136,7 @@ function Modal() {
                   <button
                     type="submit"
                     disabled={!newTaskInput}
-                    className="bg-gray-700 text-blue-100 hover:bg-blue-200 focus-visible:ring-blue-500 focus:outline-none 
+                    className="bg-blue-700 text-white hover:bg-blue-500 focus-visible:ring-blue-500 focus:outline-none 
                   focus:visible:ring-2 px-4 py-2 text-sm font-medium inline-flex justify-center rounded-md border border-transparent 
                   focus-visible-ring-offset-2 disabled:bg-gray-500 disabled:text-gray-800 disabled:cursor-not-allowed transition-all duration-300"
                   >
