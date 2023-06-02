@@ -55,7 +55,7 @@ function Modal() {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-zinc-900/50" />
+          <div className="fixed inset-0 bg-zinc-900/70" />
         </Transition.Child>
 
         {/*
